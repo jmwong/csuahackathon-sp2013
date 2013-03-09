@@ -1,0 +1,15 @@
+= simple_form_for(@script, defaults: {rows: 3}) do |f|
+  - if @script.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@script.errors.count, "error")} prohibited this script from being saved:"
+      %ul
+        - @script.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.input :name
+  = f.input :url
+  = f.input :left, input_html: {rows: 3, class: 'code' }
+  = f.input :right, input_html: {rows: 3, class: 'code'}
+  = f.input :up, input_html: {rows: 3, class: 'code'}
+  = f.input :down, input_html: {rows: 3, class: 'code'}
+  = f.button :submit, class: 'btn btn-primary'

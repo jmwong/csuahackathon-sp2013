@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ * require twitter/bootstrap
+ *= require twitter/bootstrap-responsive
+ *= require codemirror-3.1/lib/codemirror.css
+ *= require codemirror-3.1/theme/elegant.css
+ *= require codemirror-3.1/theme/blackboard.css
+ *= require_self
+ *= require_tree .
+ */
+
+#main {
+    margin-top:50px;
+}
+
+.CodeMirror {
+    width: 500px;
+    height: 100px;
+    border: 1px solid #eee;
+}
+
+#tiles img{
+    width: 570px;
+    height: 220px;
+}
+
+
+#roll-own {
+    font-size: 20pt;
+    height: 30px;
+}

@@ -1,0 +1,23 @@
+-#javascript_include_tag 'gesture'
+.hero-unit.jumbotron
+  %h1 Gesturize your web experience
+  %p Add gesture control to any web app with just your (modern) browser and webcam
+
+
+#tiles
+  %h4 New from the community
+  %hr
+  .row
+    .span6
+      %a(href="#{script_path(1)}")
+        %img(src='https://lh4.googleusercontent.com/6AqdiCPGHbqxHtZoQTicdmbh5f4QV1ePFLiUStfIYJrrov9wQFkgbLjlTQK9769hqFKoDCv9jK8=s700-h280-e365')
+    .span6
+      %a(href="#{script_path(2)}")
+        = image_tag 'fb.jpg'
+
+  %hr
+  .row
+    %a#roll-own.span6.btn.btn-danger{:href => "#{new_script_path}"}
+      %i.icon-remove.icon-white
+      Create your own script
+

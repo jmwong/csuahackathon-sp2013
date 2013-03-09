@@ -1,0 +1,25 @@
+%p#notice= notice
+
+%h1= @script.name
+%p
+  = @script.url
+%p
+  %b Left:
+  %textarea.code
+    = @script.left
+%p
+  %b Right:
+  %textarea.code
+    = @script.right
+%p
+  %b Up:
+  %textarea.code
+    = @script.up
+%p
+  %b Down:
+  %textarea.code
+    = @script.down
+
+= link_to 'Edit', edit_script_path(@script)
+\|
+= link_to 'Back', scripts_path

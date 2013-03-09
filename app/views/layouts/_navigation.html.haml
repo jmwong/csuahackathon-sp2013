@@ -1,0 +1,29 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "../"}
+        - if content_for?(:title)
+          = content_for(:title)
+        - else
+          Gesturet
+
+      #main-menu.nav-collapse.collapse
+        %ul.menu-left.nav.pull-left
+          %li
+            %a(href="#{scripts_path}")
+              All scripts
+
+
+        %ul#main-menu-right.nav.pull-right
+          %li
+            %a(href="#{bookmarklet_path}")
+              Get bookmarklet
+              %i.icon-share-alt
+          %li
+            %a(href='#{new_script_path}')
+              Create script
+              %i.icon-share-alt
